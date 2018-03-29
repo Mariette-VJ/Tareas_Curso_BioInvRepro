@@ -18,6 +18,7 @@ Idealmente, a partir de datos metagenómicos, uno sería capaz de reconstruir co
 La principal variante de laboratorio para obtener una comparación entre muestreos metagenómicos se observa en el tipo de datos moleculares que se utilizan para el estudio: diferentes tipos de _amplicones_ (Tabla 1) o _datos tipo shotgun_. 
 
 _Tabla1. Diferentes tipos de marcadores usados en metagenómica en el estudio con amplicones_
+
 | Target        | Gen/Región    | Base de Datos           |
 | ------------- |:-------------:| -----------------------:|
 | Bacteria      |      16S      | RDP,Greengenes, SILVA   |
