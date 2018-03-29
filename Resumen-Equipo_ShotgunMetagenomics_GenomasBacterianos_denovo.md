@@ -1,11 +1,11 @@
 ---
-title: "Resumen-Equipo_BLAST_ShotgunMetagenomics_GenomasBacterianos"
+title: "Resumen-Equipo_Metagenomica_y_BLAST"
 author: "Mariette Viladomat y Erika Alejandra"
 date: "21 de marzo de 2018"
 output: html_document
 ---
 
-# Equipo Microorganismos
+# Equipo Metagenómica
 
 * SMG :  Comparación de comunidades microbianas a partir de datos metagenómicos tipo shotgun -- Mariette Viladomat
 * BL : BLAST de proteína específica de hongos en genomas y metagenomas de bases de datos públicas -- Erika Alejandra
@@ -15,14 +15,22 @@ output: html_document
 
 La metagenómica se ha definido como "el análisis genómico" de microorganismos por extracción directa y clonación de ADN de un conjunto de microorganismos ([Handelsman 2004](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.333.6836&rep=rep1&type=pdf)). El trabajo pionero en el análisis de metagenómica se realizó por [Venter et al.](http://science.sciencemag.org/content/304/5667/66) en el Mar de los Sargazos. 
 
-Los objetivos de los estudios metagenómicos incluyen la caracterización completa de una comunidad, y por lo tanto generalmente incluye esfuerzos para comprender: 1) composición/estructura de lacomunidad, incluyendo el desglose taxonómico y la abundancia relativa de las diversas especies, 2) contribución génica de cada miembro de la comunidad, incluyendo el número y capacidad funcional, y 3) dentro de la especie o dentro de la población la heterogeneidad de los genes. Con los análisis metagenómicos  Idealmente, uno sería capaz de reconstruir completamente todos los genomas dentro de una muestra dada. Sin embargo, este objetivo particular ha sido en gran medida inalcanzable debido a limitaciones tecnológicas en el aislamiento bacteriano/recuperación del ADN así como en la capacidad de secuenciación (costo y rendimiento). ([Scholz, 2012](http://www.fsigeneticssup.com/article/S1875-1768(13)00020-6/pdf).
+Los objetivos de los estudios metagenómicos incluyen la caracterización completa de una comunidad, y por lo tanto generalmente incluye esfuerzos para comprender: 1) composición/estructura de la comunidad, incluyendo el desglose taxonómico y la abundancia relativa de las diversas especies, 2) contribución génica de cada miembro de la comunidad, incluyendo el número y capacidad funcional, y 3) dentro de la especie o dentro de la población la heterogeneidad de los genes. Con los análisis metagenómicos  Idealmente, uno sería capaz de reconstruir completamente todos los genomas dentro de una muestra dada. Sin embargo, este objetivo particular ha sido en gran medida inalcanzable debido a limitaciones tecnológicas en el aislamiento bacteriano/recuperación del ADN así como en la capacidad de secuenciación (costo y rendimiento). ([Scholz, 2012](http://www.fsigeneticssup.com/article/S1875-1768(13)00020-6/pdf)).
 
 __¿Cuáles son las principales variantes del método de laboratorio para generar mis datos y cuándo es más útil cada una?__
 
-__SMG:__ La principal variante de laboratorio para obtener una comparación entre muestreos metagenómicos se observa en el tipo de datos moleculares que se utilizan para el estudio: _amplicones de 16S_, _amplicones de 18S_ o _datos tipo shotgun_. Los amplicones son muy útiles cuando se desea únicamente conocer la presencia o ausencia de organismos en la comunidad muestreada,  así como los índices de diversidad taxonómica de dichos organismos([Kreisinger et al, 2017](https://www.frontiersin.org/articles/10.3389/fmicb.2017.00050/full)). Las ventajas al usar marcadores conocidos para estos estudios es lo bien anotadas que están las bases de datos y la cantidad de [programas especializados](http://www.bushmanlab.org/assets/pdf/publications/20383131.pdf) para generar los resultados sin quimeras. Sin embargo, los amplicones no permiten observar el potencial metabólico de la comunidad. Para tener esa información  biológica, se requiere todo el ADN de todos los organismos en la muestra: datos tipo shotgun ([White III et al, 2015](https://www.researchgate.net/publication/282431849_Metagenomic_analysis_reveals_that_modern_microbialites_and_polar_microbial_mats_have_similar_taxonomic_and_functional_potential)).
+La principal variante de laboratorio para obtener una comparación entre muestreos metagenómicos se observa en el tipo de datos moleculares que se utilizan para el estudio: _amplicones de 16S_, _amplicones de 18S_ o _datos tipo shotgun_. 
 
-__BL:__ En la siguiente tabla se muestra los diferentes tipos de marcadores usados en metagenómica en el estudio con amplicones. 
-	
+
+| Target        | Gen/Región    | Base de Datos           |
+| ------------- |:-------------:| -----------------------:|
+| Bacteria      |      16S      | RDP,Greengenes, SILVA   |
+| Arquea        |      16S      | RDP,Greengenes, SILVA   |
+| Fungi         |   ITS, 18S    | UNITE, GenBank, BOLD    |
+
+
+Los amplicones son muy útiles cuando se desea únicamente conocer la presencia o ausencia de organismos en la comunidad muestreada,  así como los índices de diversidad taxonómica de dichos organismos([Kreisinger et al, 2017](https://www.frontiersin.org/articles/10.3389/fmicb.2017.00050/full)). Las ventajas al usar marcadores conocidos para estos estudios es lo bien anotadas que están las bases de datos y la cantidad de [programas especializados](http://www.bushmanlab.org/assets/pdf/publications/20383131.pdf) para generar los resultados sin quimeras. Sin embargo, los amplicones no permiten observar el potencial metabólico de la comunidad. Para tener esa información  biológica, se requiere todo el ADN de todos los organismos en la muestra: datos tipo shotgun ([White III et al, 2015](https://www.researchgate.net/publication/282431849_Metagenomic_analysis_reveals_that_modern_microbialites_and_polar_microbial_mats_have_similar_taxonomic_and_functional_potential)).
+
 
 __¿Qué limitantes y posibles fuentes de error puede presentar este método (en el laboratorio o la bioinformática)? ¿Qué puede hacerse para amortiguarlos?__
 
