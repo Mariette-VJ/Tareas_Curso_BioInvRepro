@@ -8,7 +8,7 @@ output: html_document
 # Equipo Metagenómica
 Mariette Viladomat y Erika Alejandra
 
-## Introducción a los analisis metagenomicos 
+## Introducción a los analisis metagenómicos 
 
 La metagenómica se ha definido como "el análisis genómico" de microorganismos por extracción directa y clonación de ADN de un conjunto de microorganismos ([Handelsman 2004](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.333.6836&rep=rep1&type=pdf)). Uno de los trabajos pioneros en el análisis de metagenómica se realizó por [Venter et al.](http://science.sciencemag.org/content/304/5667/66) en el Mar de los Sargazos. Uno los objetivos más importantes de los estudios metagenómicos es la caracterización completa de una comunidad, por lo que generalmente se requieren esfuerzos para comprender: 1) la composición/estructura de la comunidad, incluyendo el desglose taxonómico y la abundancia relativa de las diversas especies, 2) contribución génica de cada miembro de la comunidad, incluyendo el número y capacidad funcional, y 3) la heterogeneidad de los genes dentro de la especie o dentro de la población. 
 
