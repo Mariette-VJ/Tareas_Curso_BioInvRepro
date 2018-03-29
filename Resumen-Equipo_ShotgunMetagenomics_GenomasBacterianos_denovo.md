@@ -6,6 +6,7 @@ output: html_document
 ---
 
 # Equipo Metagenómica
+Mariette Viladomat y Erika Alejandra
 
 ## Introducción a los analisis metagenomicos 
 
@@ -17,13 +18,17 @@ Idealmente, a partir de datos metagenómicos, uno sería capaz de reconstruir co
 
 La principal variante de laboratorio para obtener una comparación entre muestreos metagenómicos se observa en el tipo de datos moleculares que se utilizan para el estudio: diferentes tipos de _amplicones_ (Tabla 1) o _datos tipo shotgun_. 
 
-| Target        | Gen/Región    | Base de Datos           |
-| ------------- |:-------------:| -----------------------:|
-| Bacteria      |      16S      | RDP,Greengenes, SILVA   |
-| Arquea        |      16S      | RDP,Greengenes, SILVA   |
-| Fungi         |   ITS, 18S    | UNITE, GenBank, BOLD    |
+| Target        | Gen/Región         | Base de Datos                |
+| ------------- |:------------------:| ----------------------------:|
+| Bacteria      |         16S        | RDP,Greengenes, SILVA        |
+| Arquea        |         16S        | RDP,Greengenes, SILVA        |
+| Fungi         |      ITS, 18S      | UNITE, GenBank, BOLD, SILVA  |
+| Protistas     |    ITS, 18S, COI   | SILVA, GenBank, BOLD         |
+| Macrofauna    | COI, 16S, 12S, 18S | BOLD, GenBank                |
+| Plantas       |  matK, + rbcL, ITS | BOLD, GenBank                |
 
-_Tabla1. Diferentes tipos de marcadores usados en metagenómica en el estudio con amplicones_
+_Tabla1. Diferentes tipos de marcadores usados en metagenómica en el estudio con amplicones ([Creer et al., 2016](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.12574))._
+
 
 Los amplicones son muy útiles cuando se desea únicamente conocer la presencia o ausencia de organismos en la comunidad muestreada,  así como los índices de diversidad taxonómica de dichos organismos([Kreisinger et al, 2017](https://www.frontiersin.org/articles/10.3389/fmicb.2017.00050/full)). Las ventajas al usar marcadores conocidos para estos estudios es lo bien anotadas que están las bases de datos y la cantidad de [programas especializados](http://www.bushmanlab.org/assets/pdf/publications/20383131.pdf) para generar los resultados sin quimeras. Sin embargo, los amplicones no permiten observar el potencial metabólico de la comunidad. Para tener esa información  biológica, se requiere todo el ADN de todos los organismos en la muestra: datos tipo shotgun ([White III et al, 2015](https://www.researchgate.net/publication/282431849_Metagenomic_analysis_reveals_that_modern_microbialites_and_polar_microbial_mats_have_similar_taxonomic_and_functional_potential)).
 
