@@ -62,6 +62,8 @@ https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-file
 Probar que MetaPhlan2 funcione correctamente. escribe en tu terminal el siguiente comando y se deberán desplegar las opciones de ayuda.
 
   $ cd metaphlan2
+  
+  $ sudo apt-get install python-scipy
 
   $ python ./metaphlan2.py -h
 	
