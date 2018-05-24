@@ -85,3 +85,9 @@ Probar que MetaPhlan2 funcione correctamente. escribe en tu terminal el siguient
   $ for file in PAzules*.txt; do grep 'Archaea' $file > $file.Archaea; done
   
   $ utils/merge_metaphlan_tables.py *.Archaea > merged_Archaea_abundance_table.txt
+
+
+
+### Por último, se agrega el README del trabajo final.
+
+*Avance del [README](https://github.com/Mariette-VJ/TrabajoFinal_BioInvRepro_Mariette/blob/master/README.md)*
