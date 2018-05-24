@@ -26,7 +26,7 @@ PAzules2_R2.fastq
 PAzules3_R1.fastq     
 PAzules3_R2.fastq
 
-### Cuarta etapa: preparando los datos
+### Cuarta etapa: Preparando los datos
 
 La salida de los datos en PEAR, generá cuatro archivos de salida:
 
@@ -44,7 +44,7 @@ PAzules3.tar.bz2
 Estas carpetas deberán ser guardadas dentro de la carpeta data.
 
 
-### Quinta etapa: instalando metaphlan2
+### Quinta etapa: Instalando metaphlan2
 
 MetaPhlan2:  https://bitbucket.org/biobakery/metaphlan2
 
@@ -62,11 +62,13 @@ https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-file
 Probar que MetaPhlan2 funcione correctamente. escribe en tu terminal el siguiente comando y se deberán desplegar las opciones de ayuda.
 
   $ cd metaphlan2
+  
+  $ sudo apt-get install python-scipy
 
   $ python ./metaphlan2.py -h
 	
 
-### Sexta etapa: predicción de OTUs
+### Sexta etapa: Predicción de OTUs con metaphlan2
 
 *asegurarse de estar dentro de carpeta de metaphlan2*
 
@@ -78,8 +80,8 @@ Probar que MetaPhlan2 funcione correctamente. escribe en tu terminal el siguient
   $ python metaphlan2.py --input_type multifastq --bowtie2out PAzules3.bt2out > PAzules3.txt
 
 
-### Última etapa: obtener sólo las abundancias relativas de Archeas en una tabla comparativa entre los tres metagenomas
+### Última etapa: Obtección de abundancias relativas de Archeas en una tabla comparativa entre los tres metagenomas
 
   $ for file in PAzules*.txt; do grep 'Archaea' $file > $file.Archaea; done
   
-  $ utils/merge_metaphlan_tables.py predict_otus/*.Archaea > output/merged_Archaea_abundance_table.txt
+  $ utils/merge_metaphlan_tables.py *.Archaea > merged_Archaea_abundance_table.txt
