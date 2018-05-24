@@ -14,6 +14,6 @@ done
 
 python ../metaphlan2/utils/merge_metaphlan_tables.py ../predict_otus/*.Archaea.txt > ../output/merged_Archaea_abundance_table.txt;
 
-# The final command is included as a bonus heatmap for visualization of top 50 most abundance species of Archea on each metagenome.
+# The final command is included as a bonus heatmap for visualization of top 50  most abundance species of Archea on each metagenome.
 
 python ../metaphlan2/utils/metaphlan_hclust_heatmap.py -c bbcry --top 50 --minv 0.1 -s log --in ../output/merged_Archaea_abundance_table.txt --out ../output/images/merged_Archaea_abundance_heatmap.png
