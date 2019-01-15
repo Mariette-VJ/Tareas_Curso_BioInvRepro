@@ -1,0 +1,150 @@
+---
+title: "Final_Assay"
+author: "Mariette Viladomat"
+date: "May 24, 2018"
+---
+
+# Final Assay: Mariette Viladomat
+
+### Introduction of project analysis
+
+ Archaea domain has always been an interesting model due to their extremophile nature and their role in global biogeochemical cycling of important redox elements, such as C, S and N. The microbial carbon cycle has no doubt played an important role in the long-term regulation of the Earth's climate. Biogenic methane is thought to have been crucial for maintaining habitable surface temperatures before atmospheric oxygenation [1, 2, 3]. They have also become important to elucidate part of the evolutionary history, exploring the possibilities of the origin of life.
+ 
+ During the past years, renewed interest in the presence of viable prokaryotes in ancient salt deposits has surfaced, which was partly stimulated by the detection of halite on Mars [4, 5] and elsewhere in the universe [6]. In 1960's it was registered the first cultivation of halophiles from Permian salt sediments dating back 250 millions years ago [7, 8] but most of this microorganisms nowadays still being uncultivable and that’s when metagenomics comes into play. The first publishing about taxonomic descriptions of halophiles, including Archaea and bacteria happened 30 years later [9, 10, 11, 12, 13]. Tree topologies and branch lengths have hypothesized that halophiles have occurred 0.4 billions of years ago [14]. Archaea is a clear example of a group of prokaryotic microorganisms that remains unknown but with an undeniable relevance in nature. At present, accessible experimental and bioinformatics tools empower the study of Archaea, which could be relevant to design new molecular markers for Archaea molecular biology. [15, 16].
+
+This work aims to analyze the Archaea diversity of three metagenomes of one specific pond “The Archaean pond” in Cuatro Cienegas, Coahuila, Mexico, sampled in different dates and the development of isolation strategies to cultivate and isolate halophilic microorganisms belonging to the Archaea domain, as well as the biochemical and molecular characterization. 
+
+
+### Metagenomic analysis: Project resume 
+
+1. Metadata. Environmental conditions were measured using Hydrolab MS5 Water multiparameter sonde (OTT Hydromet GmbH, Germany).
+
+Sample 1 and 2:
+
+IBV: 7.7, Temperature: 31.45ºC, SPC: 77.21, Salinity: 53.36, TDS: 49.62, pH: 9.94, LDO: 78.4, LDO2: 3.56.
+
+Sample 3:
+
+IBV: 8.0, Temperature: 34.35ºC, SPC: 77.31, (ppt) Salinity: 52.55 TDS: 48.76, pH: 9.75, LDO: 165.3, LDO2: 7.3.
+
+2. Metagenomic Shotgun Sequencing. Three samples of total genomic DNA from sediment of three different seasons (PAzules1, PAzules2, PAzules3) were sent to LANGEBIO for sequencing using Illumina Mi-Seq 2x300 technology. 
+
+3. Bioinformatic analysis for metagenomes. After receiving the raw data for all three metagenomes, a quality check using FastQC [17] was performed; the trimming procedure was done by Cutadap software [18] in order to eliminate adapters and barcodes from Illumina sequencing using Phred 20 as threshold; followed by the merging of the paired end reads using Pear software [19]. Once the reads were merged, it was chosen to use the paired end assembled reads and also the unassembled ones to cover major accuracy for later filtering only Archaean species running Methaplan2 [20] (as shown inside this working repertoire). Output files include all predicted species abundances and all filtered Archean species abundances.
+
+
+### Results
+
+Using output of Metaphlan2, we were able to get a table comparing relative abundances of Archaean species within the three metagenomes (Figure 1).
+
+![alt text](figures/Rplot_table.png)
+
+
+_Figure 1: Relative abundance of Archaea species comparative table_
+
+### Discussions
+
+In this work, we compared the archaeal diversity of three metagenomes of the same geographical location in three different seasons, and such outcome results must be considered as descriptive and explorative in this specific niche; that is because it is been demonstrated that microbial communities are no discrete and could be spatially and temporally limited [21].
+
+The archaeal community in metagenomes was composed not only by halophiles; the methanogens but mostly halophilic methanogens is an important group of the same phylum (Euryarchaeota) that was present. This phylum Euryarchaeota was the most representative and abundant, which mainly include the aforementioned groups of extremophiles archaea. The presence of both groups is not surprising and it is easy to correlate to high-carbonate, salt crust and the black methanogenic strata of the mat, acting like a fence on both sides. 
+
+According to bioinformatic analysis the percentage of Archaea domain in the three Dome-metagenomes, was about 4%, respectively. The richness between metagenomes shared 188 species, PAzules1 had only one different specie in comparison with the two others (PAzules1 and PAzules2), metagenome 2 did not have any particular unique specie, and metagenome 3 included 2 unique specie, that PAzules1 and PAzules2 did not have. OTUs prediction clearly showed six phyla of Archaea domain, including Euryarchaeota as the most abundant, Crenarchaeota, Thaumarchaeota, Korarchaeota, Nanoarchaeota and a putative new phylum (see output/merged_Archaea_abundance_table.txt), 15 classes (see output/merged_Archaea_abundance_table.txt), 25 orders, 36 families, and 93 genera. The specie with major percentage of abundance was Methanohalophilus mahii, but there was several species with drastic changes in their percentage of abundance through seasons.
+
+### Bibliography
+
+[1] A. A. Pavlov, M. T. Hurtgen, J. F Kasting, and M.A Arthur, “Methane- rich Proterozoic atmosphere? ,” Geology, vol.  31, pp. 87–90, 2003. 
+[2] J. L. Eigenbrode, and K. H. Freemen, “Late Archean rise of aerobic microbial ecosystems,” Proceedings of the National Academy of Sciences of the USA, vol. 103, pp. 15759–15764, 2006. 
+[3] D. C. Catling, M. W. Claire, and K. J. Zahnle, “Anaerobic methanotrophy and the rise of atmospheric oxygen,” Philosophical Transactions of the Royal Society of London A, vol. 365, pp. 1867–1889, 2007. 
+[4] A. H. Treiman, J. D. Gleason, D. D. Bogard, “The SNC meteorites are from Mars, ” Planetary and Space Science, vol. 48, pp. 1213–1230, 2000. 
+[5] S. W. Squyres, A. H. Knoll, R. E. Arvidson, B. C. Clark, J. P. Grotzinger, B. L Jolliff, S. M. McLennan, N. Tosca, J. F. Bell 3rd, W. M. Calvin, W. H Farrand, T. D Glotch, M. P Golombek, K. E Herkenhoff, J. R. Johnson, G. Klingelhöfer, H. Y. McSween, and A. S. Yen, “ Two years at Meridiani Planum: results from the Opportunity Rover,” Science, vol. 313, issue 5792, pp. 1403-7, 2006. 
+[6] M. E. Zolensky, R. J. Bodnar, E. K. Gibson Jr, L. E. Nyquist, Y. Reese, C. Y. Shih, and H. Wiesmann,  “Asteroidal water within fluid inclusion-bearing halite in an H5 chondrite, Monahans,“ Science, vol. 285, issue 5432, pp. 1377-9, 1999. 
+[7] H. Dombrowski, “Bacteria from Paleozoic salt deposits,” Annals of the New York Academy of Sciences, vol. 108, pp. 453-60, 1963. 
+[8] C. F. Norton, T. J. McGenity, and W. D. Grant, “Archaeal halophiles (halobacteria) from two British salt mines,” Journal of General Microbiology, vol. 139, pp. 1077–1081, 1993. 
+[9] E.B.M Denner , T. J.  McGenity, H. J. Busse, G. Wanner, W. D. Grant, and H. Stan-Lotter, “ Halococcus salifodinae sp. nov., an archaeal isolate from an Austrian salt mine,” International Journal of Systematic Bacteriology, vol. 44, pp. 774–780, 1994. 
+[10] H. Stan-Lotter, M. Pfaffenhuemer, A. Legat, H. J. Busse, C. Radax, and C. Gruber, “Halococcus dombrowskii sp. nov., an archaeal isolate from a Permian alpine salt deposit,” International Journal Systematic Evolutionay Microbology, vol. 52, pp. 1807-14, 2002.
+[11] M. R. Mormile, M. A. Biesen, M. C Gutierrez, A. Ventosa, J. B. Pavlovich, T. C. Onstott, and J. K. Fredrickson, “Isolation of Halobacterium salinarum retrieved directly from halite brine inclusions” Environmental Microbiology, vol. 5 issue 11, pp.1094-102, 2003. 
+[12] C. Gruber, A. Legat , M. Pfaffenhuemer, C. Radax, G. Weidler, H. J. Busse, and H. Stan-Lotter, “Halobacterium noricense sp. nov., an archaeal isolate from a bore core of an alpine Permian salt deposit, classification of Halobacterium sp. NRC-1 as a strain of H. salinarum and emended description of H. Salinarum,” Extremophiles, vol. 8, issue 6, pp. 431-9, 2004. 
+[13] R. H. Vreeland, J. Jones, A. Monson, W. D  Rosenzweig, T. K Lowenstein, M. Timofeeff, C. Satterfield, B. C. Cho, J. S. Park, A. Wallace, and W. D. Grant “Isolation of live Cretaceous (121–112 million years old) halophilic Archaea from primary salt crystals,” Geomicrobiology Journal, vol. 24, pp. 275–282, 2007. 
+[14] C. Blank, “Not so old Archea – the antiquity of biogeochemical processes in the archaeal domain of life,” Geobiology, vol. 7, pp.  495-514, 2009. 
+[15] M. Hoppert, M. Krüger, J. Reitner, and C. Cockell,” Archaea in past and present geobichemical processes and elemental cycles,” Archaea,vol.   , pp.  , 2013.
+[16] R. Cavicchioli, “Archaea: timeline of the third domain,” Nature Reviews Microbiology vol. 9, pp. 51-61, 2011.
+[17] S. Andrews, “FastQC: a quality control tool for high throughput sequence data,” 2010 Available online at: http://www.bioinformatics.babraham.ac.uk/projects/fastqc
+[18] M. Martin, “ Cutadapt Removes Adapter Sequences from High-Throughput Sequencing Reads,” EMBnet Journal, vol. 17, pp. 10-12, 2011. 
+[19] J. Zhang,  K. Kobert, T. Flouri, and A. Stamatakis, “Pear: a fast and accurate Illumina Paired-End read merger,” Bioinformatics, vol. 30, issue 5, pp. 614-620, 2014. 
+[20] N. Segata, L. Waldron, A. Ballarini, V. Narasimhan, O. Jousson, and C. Huttenhower, “Metagenomic microbial community profiling using unique clade-specific marker genes,” Nature Methods, vol. 8, pp. 811-814, 2012. 
+[21] D. R. Nemergut, S. K. Schmidt, T. Fukumi, S. P. O´Neill, T. M. Bilinski, L. F. Stanish, J. E. Knelman, J. L. Darcy, R. C. Lynch, P. Wickey, and S. Ferrenberg, “Patterns and processes of microbial assembly,” Microbiology and Molecular Biology Reviews, vol. 77, pp. 342-356, 2013.
+
+
+### Supplementary information: Figures using R
+
+##### Figure 1
+
+__1. Open a terminal on your computer and go to output carpet within this repertoire.__
+
+```
+$ grep -E "(s__)|(^ID)" merged_Archaea_abundance_table.txt | grep -v "t__" | sed 's/^.*s__//g' > merged_Archaea_species.csv
+```
+
+you can find this file already inside output carpet
+
+```
+$ ls output/
+        images/
+        merged_Archaea_abundance_table.txt
+        merged_Archaea_species.csv
+```
+
+
+
+__2. Make table from a data frame__
+
+open R inside assay carpet within this repertoire
+
+```
+$ ls assay/
+        figures/
+        Final.Assay.Rmd
+```
+
+then, run the following command line:
+
+```
+install.packages("gridExtra")
+
+library(gridExtra)
+
+table <- read.csv("../output/merged_Archaea_species.csv", sep="\t")
+
+grid.table(table)
+
+```
+saved file as Rplot_table.pdf
+```
+$ ls assay/figures/
+        Rplot_table.pdf
+```
+
+![alt text](figures/Rplot_table.png)
+
+_Figure 1: Relative abundance of Archaea species comparative table_
+
+__Bonus R image: Heatmap__
+
+```
+table <- read.csv("../output/merged_Archaea_species.csv", sep="\t")
+row.names(table) <- table$ID
+table <- table[,2:4]
+table_matrix <- data.matrix(table)
+table_matrix <- heatmap(table_matrix, Rowv=NA, Colv=NA, col=heat.colors(256), scale="column", margins=c(5,10), cexRow=0.1, cexCol=0.5)
+```
+saved file as Rplot_heatmap.pdf
+
+```
+$ ls assay/figures/
+        Rplot_table.pdf
+        Rplot_heatmap.pdf
+```
+
+
+![alt text](figures/Rplot_heatmap.png)
+
+_Figure 2: bonus heatmap_

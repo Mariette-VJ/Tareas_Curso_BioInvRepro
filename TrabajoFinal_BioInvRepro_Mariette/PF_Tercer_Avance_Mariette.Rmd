@@ -1,0 +1,93 @@
+---
+title: "ProyectoFinal_Tercer_Avance_Mariette"
+author: "Mariette Viladomat"
+date: "May 15, 2018"
+---
+
+# Proyecto Final: Tercer Avance
+#####   Mariette Viladomat Jasso
+
+### Objetivo
+
+Se cuentan con datos de tres metagenomas obtenidos de muestras del mismo sitio tomadas en diferentes tiempos a lo largo de un periodo total de un año y medio. Las muestras son provenientes de un tapete microbiano de Cuatro Ciénegas tras cambios ambientales en el sitio y se pretende conocer la diversidad de arqueas de los muestreos (dentro de cada muestreo y entre ellos).
+
+Para realizar el obejtivo, estos metagenomas deberán ser pre procesados (eliminación de adaptadores y limpieza de calidades) para después realizar una predicción de OTUs. De las predicciones se eligirań las arqueas de las muestas, así como sus diversidades relativas. 
+
+UPDATE: No se incluirá en este trabajo la obtención de las diversidades alfa y beta de las arqueas pero sí se generará una tabla con las abundancias relativas de las diferentes especies de arqueas que servirán para, con ella, obtener a futuro las diversidades alfa y beta.
+
+El nombre de los metagenomas a procesar:
+
+PAzules_R1.fastq      
+PAzules_R2.fastq
+
+PAzules2_R1.fastq
+PAzules2_R2.fastq
+
+PAzules3_R1.fastq     
+PAzules3_R2.fastq
+
+### Cuarta etapa: Preparando los datos
+
+La salida de los datos en PEAR, generá cuatro archivos de salida:
+
+*.assembled.fastq
+*.discarded.fastq
+*.unassembled.forward.fastq
+*.unassembled.reverse.fastq
+
+Para optimizar el proceso de predicción de OTUs, así como la memoria, el siguiente paso será el de comprimir en formato tar.bz2 los archivos .assembled, .unassembled.forward y .unassembled.reverse de cada metagenoma. No incluir el archivo .discarded ya que este contiene las lecturas que no pasaron el filtro de calidad o fueron demasiado pequeñas para el join de PEAR. Sin embargo, dado a que poseemos datos metagenómicos tipo shotgun, esperamos que varias de nuestras lecturas PE, no hayan podido unirse R1 y R2, por lo que las salidas unassembled poseen mucha información que no debe ser descartada. El archivo final deberá ser una carpeta comprimida en formado .tar.bz2 con el nombre del metagenoma, por lo que tendremos los siguientes archivos:
+
+PAzules.tar.bz2
+PAzules2.tar.bz2
+PAzules3.tar.bz2
+
+Estas carpetas deberán ser guardadas dentro de la carpeta data.
+
+
+### Quinta etapa: Instalando metaphlan2
+
+MetaPhlan2:  https://bitbucket.org/biobakery/metaphlan2
+
+	$ sudo apt-get update
+
+	$ sudo apt-get install mercurial
+
+	$ hg clone https://bitbucket.org/biobakery/metaphlan2
+
+
+ó Bajar el programa de la siguiente liga:
+
+https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files
+
+Probar que MetaPhlan2 funcione correctamente. escribe en tu terminal el siguiente comando y se deberán desplegar las opciones de ayuda.
+
+  $ cd metaphlan2
+  
+  $ sudo apt-get install python-scipy
+
+  $ python ./metaphlan2.py -h
+	
+
+### Sexta etapa: Predicción de OTUs con metaphlan2
+
+*asegurarse de estar dentro de carpeta de metaphlan2*
+
+
+  $ python metaphlan2.py --input_type multifastq --bowtie2out PAzules.bt2out > PAzules.txt
+  
+  $ python metaphlan2.py --input_type multifastq --bowtie2out PAzules2.bt2out > PAzules2.txt
+  
+  $ python metaphlan2.py --input_type multifastq --bowtie2out PAzules3.bt2out > PAzules3.txt
+
+
+### Última etapa: Obtección de abundancias relativas de Archeas en una tabla comparativa entre los tres metagenomas
+
+  $ for file in PAzules*.txt; do grep 'Archaea' $file > $file.Archaea; done
+  
+  $ utils/merge_metaphlan_tables.py *.Archaea > merged_Archaea_abundance_table.txt
+
+
+
+### Por último, se agrega el README del trabajo final.
+
+*Avance del [README](https://github.com/Mariette-VJ/TrabajoFinal_BioInvRepro_Mariette/blob/master/README.md)*
